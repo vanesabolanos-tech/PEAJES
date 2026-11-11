@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-class Persona{
+/*class Persona{
     protected:
     string nombre;
     string documento;
@@ -12,4 +12,4 @@ class Persona{
 
     
 
-}
+}*/

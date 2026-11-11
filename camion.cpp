@@ -1,31 +1,42 @@
 #include <iostream>
-#include "camion.h"
+#include "camion.hpp"
+#include "excepcion.hpp"
+#include "variante.hpp"
 
-Camion::Camion()
-{
-  this->cantidadEjes = "";
- 
+using namespace std;
+
+Camion::Camion(string placa, int cantidadEjes) : Vehiculo(placa){
+  if(cantidadEeje < 2){
+    throw DatosInvalosExcepcion("un camion debe de llevar al menos dos ejes");
+ }
+  this->cantidadEjes = cantidadEjes;
+
+}
+Camion::~Camion(){
+  cout<< "destruyendo camion"<< this->placa<<endl;
 }
 
-Camion::Camion(int cantidadEjes)
-{
-  this->cantidadEeje= cantidadEjes;
 
-}
-
-void Camion::setCantidadEjes(int cantidadEjes) { this->cantidadEjes = cantidadEjes; }
-
-int Camion::getCantidadEjes() { return this->cantidadEjes; }
-
-/*void Camion::print()
-{
-  cout << "Informacion del autor" << endl;
-  cout << "Nombre: " << this->nombre << endl;
-  cout << "Nacionalidad: " << this->nacionalidad << endl;
-  cout << "Fecha de nacimiento: " << this->fechaNacimiento << endl;
-  if (this->fechaMuerte.length() > 0)
-  {
-    cout << "Fecha de muerte: " << this->fechaMuerte << endl;
+void Camion::setCantidadEjes(int cantidadEjes) {
+   if(cantidadEeje < 2){
+    throw DatosInvalosExcepcion("un camion debe de llevar al menos dos ejes");
   }
-  cout << "Libros publicados: " << this->librosPublicados << endl;
-}*/
+   this->cantidadEjes = cantidadEjes; 
+}
+
+int Camion::getCantidadEjes()const { 
+  return this->cantidadEjes; 
+}
+
+string Camion :: getTipo() const{
+  return "Camion";
+}
+
+int Camion :: cobrar() const{
+  return (8000 + 100* UNIDAD)*cantidadEjes;
+}
+
+string Camion:: resumen()const {
+  return Vehiculo::resumen() + ", cantidad de ejes"+ to_string(this->cantidadEjes);
+
+}

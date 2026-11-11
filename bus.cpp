@@ -1,31 +1,43 @@
 #include <iostream>
 #include "bus.h"
+#include "excepciones.h"
+#include "variante.h"
 
-Bus::Bus()
-{
-  this->puestos= "";
- 
-}
+using namespace std;
 
-Bus::Bus(int puestos)
-{
-  this->puestos= puestos;
-
-}
-
-void Moto::setPuestos(int puestos) { this->puestos= puestos; }
-
-int Camion::getPuestos() { return this->puestos; }
-
-/*void Camion::print()
-{
-  cout << "Informacion del autor" << endl;
-  cout << "Nombre: " << this->nombre << endl;
-  cout << "Nacionalidad: " << this->nacionalidad << endl;
-  cout << "Fecha de nacimiento: " << this->fechaNacimiento << endl;
-  if (this->fechaMuerte.length() > 0)
-  {
-    cout << "Fecha de muerte: " << this->fechaMuerte << endl;
+Bus::Bus(string placa, int puestos): Vehiculo(placa){
+  if(puestos < 1){
+    throw DatosInvalosExcepcion ("El bus debe tener al menos un puestos");
   }
-  cout << "Libros publicados: " << this->librosPublicados << endl;
-}*/
+  this->puestos= puestos;
+}
+Bus::~bus(){
+  cout <<"destruyendo busss"<< this->placa<<endl;
+}
+
+void Bus::setPuestos(int puestos) {
+    if(puestos < 1){
+    throw DatosInvalosExcepcion ("El bus debe tener al menos un puestos");
+  }
+   this->puestos= puestos;
+   }
+
+int Bus::getPuestos() const{
+   return this->puestos; 
+  }
+
+string Bus::getTipo() const{
+  return "Bus";
+}
+
+int Bus::cobrar() const{
+  return 14000 + 300 * UNIDAD;
+}
+
+string Bus::resumen() const {
+  return Vehiculo::resumen() + ", puestos: " + to_string(this->puestos);
+}
+
+
+
+

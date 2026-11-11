@@ -1,31 +1,41 @@
 #include <iostream>
 #include "carro.h"
+#include "excepcion.hpp"
+#include "variante.hpp"
 
-Carro::Carro()
-{
-  this->cantidadpasajeros = "";
- 
-}
+using namespace std;
 
-Carro::Carro(int cantidadpasajeros)
-{
-  this->cantidadpasajeros= cantidadpasajeros;
-
-}
-
-void Carro::setCantidpasajeros(int cantidadpasajeros) { this->cantidadpasajeros= cantidadpasajeros; }
-
-int Carro::getCantidadPasajeros) { return this->cantidadpasajeros; }
-
-/*void Camion::print()
-{
-  cout << "Informacion del autor" << endl;
-  cout << "Nombre: " << this->nombre << endl;
-  cout << "Nacionalidad: " << this->nacionalidad << endl;
-  cout << "Fecha de nacimiento: " << this->fechaNacimiento << endl;
-  if (this->fechaMuerte.length() > 0)
-  {
-    cout << "Fecha de muerte: " << this->fechaMuerte << endl;
+Carro::Carro(string placa, int cantidadpasajeros): Vehiculo(placa){
+  if(cantidadpasajeros < 1) {
+    throw DatosInvalosExcepcion("un carro debe llevar al menos un pasajero");
   }
-  cout << "Libros publicados: " << this->librosPublicados << endl;
-}*/
+ this->cantidadpasajeros = "";
+}
+Carro::~Carro(){
+  cout << "destruyendo carro" << this->placa<<endl;
+}
+
+void Carro::setCantidpasajeros(int cantidadpasajeros) {
+if (cantidadpasajeros < 1){
+  throw DatosInvalosExcepcion("un carro debe llevar al menos un pasajero");
+
+}
+ this->cantidadpasajeros= cantidadpasajeros;
+ }
+
+int Carro::getCantidadPasajeros()cont { 
+  return this->cantidadpasajeros; }
+
+
+  string Carro::getTipo() const{
+    return "carro";
+  }
+
+  int Carro::cobrar() const{
+    return 10000+200*UNIDAD;
+  }
+
+  string Carro:: resumen()const{
+    return Vehiculo:: resumen() + ",pasajeros: "+ to_string(this->cantidadpasajeros);
+
+  }
