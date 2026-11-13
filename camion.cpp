@@ -34,7 +34,7 @@ string Camion :: getTipo() const{
 }
 
 int Camion :: cobrar() const{
-  return (8000 + 100*20)*cantidadEjes;
+  return (8000 + 100*2)*cantidadEjes;
 }
 
 string Camion:: resumen()const {

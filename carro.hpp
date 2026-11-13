@@ -1,6 +1,7 @@
 #pragma once
 #include "vehiculo.hpp"
 #include "variante.hpp"
+#include "propietario.hpp"
 
 using namespace std;
 
@@ -9,9 +10,10 @@ class Carro : public Vehiculo
 {
 private:
   int cantidadpasajeros ;
+  Propietario *p;
 
 public:
-  Carro(string placa, int cantidadpasajeros);
+  Carro(string placa, int cantidadpasajeros, Propietario* p);
   ~Carro() override;
 
   void setCantidadpasajeros(int cantidadpasajeros);

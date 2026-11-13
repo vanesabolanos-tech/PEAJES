@@ -6,7 +6,7 @@
 
 using namespace std;
 
-Moto::Moto(string placa, int cilindraje):Vehiculo(placa){
+Moto::Moto(string placa, int cilindraje, Propietario* p):Vehiculo(placa){
   if(cilindraje >0){
     throw("La moto tiene que tener un cilindraje mayor a cero");
   }
@@ -28,17 +28,21 @@ int Moto::getCilindraje() const{
    return this->cilindraje; }
 
 
- void setAltocilindraje(int cilindraje){
-  if(cilindraje > 400){
-  cout<<("La moto es de alto cilindraje");
-  }
+ bool Moto::altocilidraje()const{
+  return this->cilindraje >400;
 }
 
   string Moto::getTipo() const{
-    return "moto";
+    return "Moto";
   }
 
   int Moto::cobrar() const{
+       if(this->p !=nullptr){
+      if(this ->p->getServecino()){
+        int descuentoc=30+5;
+        return ((3000+100*1)*(100-descuentoc))/100;
+      }
+    }
     return 3000+100*1;
   }
 

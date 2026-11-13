@@ -31,7 +31,7 @@ string Bus::getTipo() const{
 }
 
 int Bus::cobrar() const{
-  return 14000 + 300 * 20;
+  return 14000 + 300 * 2;
 }
 
 string Bus::resumen() const {

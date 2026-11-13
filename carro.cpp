@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Carro::Carro(string placa, int cantidadpasajeros): Vehiculo(placa){
+Carro::Carro(string placa, int cantidadpasajeros, Propietario* p): Vehiculo(placa){
   if(cantidadpasajeros < 1) {
     throw DatosInvalidosException("un carro debe llevar al menos un pasajero");
   }
@@ -31,14 +31,21 @@ int Carro::getCantidadpasajeros()const {
 
 
   string Carro::getTipo() const{
-    return "carro";
+    return "Carro";
   }
 
   int Carro::cobrar() const{
+    
+     if(this->p !=nullptr){
+      if(this ->p->getServecino()){
+        int descuentoc=30+5;
+        return ((10000+200*1)*(100-descuentoc))/100;
+      }
+    }
     return 10000+200*1;
+    
   }
 
   string Carro:: resumen()const{
     return Vehiculo:: resumen() + ",pasajeros: "+ to_string(this->cantidadpasajeros);
-
   }
