@@ -5,7 +5,7 @@
 using namespace std;
 
 
-class Carro : public vehiculo
+class Carro : public Vehiculo
 {
 private:
   int cantidadpasajeros ;
@@ -14,7 +14,7 @@ public:
   Carro(string placa, int cantidadpasajeros);
   ~Carro() override;
 
-  void setCantidpasajeros(string cantidadpasajeros);
+  void setCantidadpasajeros(int cantidadpasajeros);
   int getCantidadpasajeros() const;
 
  string getTipo()const override;

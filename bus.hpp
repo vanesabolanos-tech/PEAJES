@@ -13,7 +13,7 @@ public:
   ~Bus() override;
 
   void setPuestos(int puestos);
-  string getPuestos() const;
+  int getPuestos() const;
 
 string getTipo()const override;
 int cobrar() const override;

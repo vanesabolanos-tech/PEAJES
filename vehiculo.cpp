@@ -5,7 +5,7 @@ using namespace std;
 
 Vehiculo::Vehiculo(string placa){
     if(placa.length()<4){
-        throw PlacaInvalidaExcepcion("las placas no pueden tener menos de cuatro caracteres");
+        throw PlacaInvalidaException ("las placas no pueden tener menos de cuatro caracteres");
     }
     else{
         this->placa= placa;

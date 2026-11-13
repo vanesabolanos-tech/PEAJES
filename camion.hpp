@@ -1,5 +1,7 @@
 #pragma once
-#include <string>
+#include <string> 
+#include "vehiculo.hpp"
+
 using namespace std;
 class Camion : public Vehiculo{
 private:
@@ -9,8 +11,8 @@ public:
   Camion(string placa, int cantidadEjes);
   ~Camion()override;
 
-  void setCantidadEjes(string cantidadEjes);
-  string getCantidadEjes() const;
+  void setCantidadEjes(int cantidadEjes);
+  int getCantidadEjes() const;
 
   string getTipo() const override;
   int cobrar() const override;

@@ -1,13 +1,13 @@
 #include <iostream>
 #include "camion.hpp"
-#include "excepcion.hpp"
+#include "excepciones.hpp"
 #include "variante.hpp"
 
 using namespace std;
 
 Camion::Camion(string placa, int cantidadEjes) : Vehiculo(placa){
-  if(cantidadEeje < 2){
-    throw DatosInvalosExcepcion("un camion debe de llevar al menos dos ejes");
+  if(cantidadEjes < 2){
+    throw DatosInvalidosException("un camion debe de llevar al menos dos ejes");
  }
   this->cantidadEjes = cantidadEjes;
 
@@ -18,11 +18,12 @@ Camion::~Camion(){
 
 
 void Camion::setCantidadEjes(int cantidadEjes) {
-   if(cantidadEeje < 2){
-    throw DatosInvalosExcepcion("un camion debe de llevar al menos dos ejes");
+   if(cantidadEjes < 2){
+    throw DatosInvalidosException("un camion debe de llevar al menos dos ejes");
   }
    this->cantidadEjes = cantidadEjes; 
 }
+
 
 int Camion::getCantidadEjes()const { 
   return this->cantidadEjes; 
@@ -33,7 +34,7 @@ string Camion :: getTipo() const{
 }
 
 int Camion :: cobrar() const{
-  return (8000 + 100* UNIDAD)*cantidadEjes;
+  return (8000 + 100*20)*cantidadEjes;
 }
 
 string Camion:: resumen()const {

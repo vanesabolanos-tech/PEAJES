@@ -1,18 +1,24 @@
 #pragma once
 #include <string>
+#include "carro.hpp"
+#include "moto.hpp"
+#include "persona.hpp"
+
 using namespace std;
-class Propietario
+
+class Propietario: public Persona
 {
-/*private:
-  int cantidadpasajeros ;
+private:
+bool servecino;
 
 public:
-  Carro();
-  Carro(int cantidadpasajeros);
+   Propietario(bool servecino);
+  ~Propietario() override;
 
-  void setCantidpasajeros(string cantidadpasajeros);
+  void setServecino(bool servecino);
+  bool getServecino() const;
 
-  string getCantidadpasajeros();
-
-  void print();*/
+ string getTipo()const override;
+ string resumen() const override; 
+  
 };

@@ -6,18 +6,18 @@ using namespace std;
 class Moto: public Vehiculo{
 private:
   int cilindraje;
-  int altocilindraje;
+  //int altocilindraje;
 
 public:
   Moto(string placa, int cilindraje);
   ~Moto() override;
 
-  void setCilindraje(string cilindraje);
-  string getCilindraje()const;
+  void setCilindraje(int cilindraje);
+  int getCilindraje()const;
 
-  void setAltocilindraje(string cilindraje )
+  void setAltocilindraje(int cilindraje );
 
  string getTipo() const override;
- int cobrar() const override;
+ 
  string resumen() const override;
 };
