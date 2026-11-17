@@ -1,7 +1,5 @@
 #pragma once
 #include <string>
-#include "carro.hpp"
-#include "moto.hpp"
 #include "persona.hpp"
 
 using namespace std;
@@ -12,7 +10,7 @@ private:
 bool servecino;
 
 public:
-   Propietario(bool servecino);
+   Propietario(string nombre, string documento,bool servecino);
   ~Propietario() override;
 
   void setServecino(bool servecino);

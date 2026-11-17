@@ -1,7 +1,6 @@
 #include <iostream>
 #include "carro.hpp"
 #include "excepciones.hpp"
-#include "variante.hpp"
 
 using namespace std;
 
@@ -33,6 +32,11 @@ int Carro::getCantidadpasajeros()const {
   string Carro::getTipo() const{
     return "Carro";
   }
+
+  void Carro::setPropietario(Propietario* nuevoP){
+    this->p=nuevoP;
+  }
+
 
   int Carro::cobrar() const{
     

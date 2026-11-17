@@ -1,11 +1,11 @@
 #include <iostream>
 #include "propietario.hpp"
 #include "excepciones.hpp"
-#include "variante.hpp"
+
 
 using namespace std;
 
-Propietario::Propietario(bool servecino): Persona(nombre, documento){
+Propietario::Propietario(string nombre, string documento, bool servecino): Persona(nombre, documento){
   
   this->servecino= servecino;
 

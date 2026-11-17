@@ -1,6 +1,5 @@
 #pragma once
 #include "Vehiculo.hpp"
-#include "Variante.hpp"
 #include "propietario.hpp"
 using namespace std;
 

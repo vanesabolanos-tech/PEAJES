@@ -1,6 +1,5 @@
 #pragma once
 #include "vehiculo.hpp"
-#include "variante.hpp"
 #include "propietario.hpp"
 
 using namespace std;
@@ -18,6 +17,7 @@ public:
 
   void setCantidadpasajeros(int cantidadpasajeros);
   int getCantidadpasajeros() const;
+  void setPropietario(Propietario* nuevoP);
 
  string getTipo()const override;
  int cobrar () const override;

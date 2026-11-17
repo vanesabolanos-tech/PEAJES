@@ -1,11 +1,7 @@
 #pragma once
 #include <string>
-#include "bus.hpp"
-#include "camion.hpp"
-#include "carro.hpp"
-#include "moto.hpp"
 #include "persona.hpp"
-#include "caseta.hpp"
+
 
 using namespace std;
 
@@ -15,7 +11,7 @@ private:
 string codempleado ;
 
 public:
-  Operador(string codempleado);
+  Operador(string nombre, string documento, string codempleado);
   ~Operador() override;
 
   void setCodempleado(string codempleado);

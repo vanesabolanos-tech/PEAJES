@@ -1,7 +1,6 @@
 #include <iostream>
 #include "moto.hpp"
 #include "excepciones.hpp"
-#include "variante.hpp"
 #include "vehiculo.hpp"
 
 using namespace std;

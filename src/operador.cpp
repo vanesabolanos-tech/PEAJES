@@ -1,11 +1,11 @@
 #include <iostream>
 #include "operador.hpp"
 #include "excepciones.hpp"
-#include "variante.hpp"
+
 
 using namespace std;
 
-Operador::Operador(string codempleado): Persona(nombre, documento){
+Operador::Operador(string nombre, string documento, string codempleado): Persona(nombre, documento){
   
   this->codempleado= codempleado;
 

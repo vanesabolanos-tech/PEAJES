@@ -31,13 +31,13 @@ void Caseta::regristrarvehiculo(Vehiculo* v){
     this->dinero+=pago;
 
     if(tipo =="Carro"){
-        this->carros;
+        this->carros++;
     }else if(tipo =="Moto"){
-        this->motos;
+        this->motos++;
     }else if(tipo =="Bus"){
-        this->buses;
+        this->buses++;
     }else if(tipo =="Camion"){
-        this->camiones;
+        this->camiones++;
     }
 }
 

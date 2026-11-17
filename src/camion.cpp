@@ -1,7 +1,7 @@
 #include <iostream>
 #include "camion.hpp"
 #include "excepciones.hpp"
-#include "variante.hpp"
+
 
 using namespace std;
 
