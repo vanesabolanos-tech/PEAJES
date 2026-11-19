@@ -10,6 +10,7 @@ Moto::Moto(string placa, int cilindraje, Propietario* p):Vehiculo(placa){
     throw("La moto tiene que tener un cilindraje mayor a cero");
   }
     this->cilindraje= cilindraje;
+    
  }
 
 Moto:: ~Moto(){
@@ -19,7 +20,7 @@ Moto:: ~Moto(){
 
 void Moto::setCilindraje(int cilindraje) { 
    if(cilindraje <0){
-    throw("La moto tiene que tener un cilindraje mayor a cero");
+    throw("La moto tienthis->p=p;e que tener un cilindraje mayor a cero");
   }
   this->cilindraje = cilindraje;
  }

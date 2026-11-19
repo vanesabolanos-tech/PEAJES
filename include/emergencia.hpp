@@ -1,4 +1,4 @@
-#pragma once 
+/*#pragma once 
 #include <string>
 
 
@@ -19,4 +19,4 @@ class Emergencia{
     string getDescripcion();
   
 
-};
+};*/

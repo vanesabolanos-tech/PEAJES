@@ -1,4 +1,4 @@
-#include "emergencia.hpp"
+/*#include "emergencia.hpp"
 #include "vehiculo.hpp"
 using namespace std;
 
@@ -9,4 +9,4 @@ this->descripcion=descripcion;
 
 Emergencia::~Emergencia(){
     cout<<"destruyendo emergencia"<<endl;
-}
+}*/

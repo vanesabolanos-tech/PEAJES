@@ -15,6 +15,10 @@ Vehiculo::~Vehiculo(){
     cout<<"destruyendo vehiculo"<<this->getPlaca()<<endl;
 }
 
+ string Vehiculo:: getPlaca() const{
+    return this->placa;
+ }
+
 string Vehiculo::resumen()const{
     return this->getTipo()+""+this->getPlaca();
 }

@@ -9,6 +9,7 @@ Carro::Carro(string placa, int cantidadpasajeros, Propietario* p): Vehiculo(plac
     throw DatosInvalidosException("un carro debe llevar al menos un pasajero");
   }
  this->cantidadpasajeros = cantidadpasajeros;
+ this->p=p;
 }
 Carro::~Carro(){
   cout << "destruyendo carro" << this->placa<<endl;
