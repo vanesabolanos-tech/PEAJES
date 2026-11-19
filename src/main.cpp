@@ -14,7 +14,7 @@ using namespace std;
 int main(){
     vector<Vehiculo*>vehiculos;
     vector<Propietario*>propietarios;
-
+//crear una ambulancia, cobran en emergencia y sin emergencia y destruyen(delete)
     try{
         Operador* o =new Operador("Isabel","656","empl1");
         Caseta* caseta=new Caseta(o);

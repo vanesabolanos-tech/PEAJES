@@ -6,7 +6,7 @@
 using namespace std;
 
 Moto::Moto(string placa, int cilindraje, Propietario* p):Vehiculo(placa){
-  if(cilindraje >0){
+  if(cilindraje < 0){
     throw("La moto tiene que tener un cilindraje mayor a cero");
   }
     this->cilindraje= cilindraje;
